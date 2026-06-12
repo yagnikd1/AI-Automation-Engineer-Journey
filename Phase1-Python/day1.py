@@ -1,4 +1,4 @@
-# ------------------------- Name and age input programs ----------------
+# ------------------------- Name and age input programs ---------------
 
 
 #--------------- Excercise 1
