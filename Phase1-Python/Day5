@@ -1,0 +1,127 @@
+# ------------------------------------------- Memory Chellenge ------------------
+
+
+
+
+# ----------------- Age Checker
+
+age = int(input('Enter your age: '))
+
+if age >= 18:
+    print("you are an adult")
+
+else: 
+    print("you are minor")
+
+
+
+
+print("\n")
+# ----------------- Password Check
+
+
+
+password = input("Enter password: ")
+
+if password == "python123":
+    print("Access Granted")
+
+else: 
+    print("Access Denied")
+
+
+
+print("\n")
+# ----------------- Favourite Language
+
+
+
+language = input("Enter your favourite language: ")
+
+if language == 'Python':
+    print('Great Choice!')
+
+elif language == 'Java':
+    print('Good Choice')
+
+elif language == 'C':
+    print('Not Bad')
+    
+else:
+    print('Try Again')
+
+
+# ----------------  Package Batch Checker
+
+
+package = input('Enter Package Batch code: ')
+
+if package == 'batch_2026':
+    print('Fresh Batch')
+elif package == 'batch_2025':
+    print('Good')
+elif package == 'batch_2024':
+    print('Expired')
+else:
+    print('Invalid Batch Code')
+
+
+
+print("\n")
+# ------------------ Marks Checker
+
+marks = int(input("Enter your marks: "))
+
+if marks >= 35:
+    print('Pass')
+
+else:
+    print('Fail')
+
+
+
+print("\n")
+# ----------------- Memory Challenge
+
+
+name = input('Enter your name: ')
+age = int(input("Enter your age: "))
+
+
+if age >= 18:
+    print('Hello', name, 'You Can vote')
+
+else:
+    print('Hello', name, 'You cant vote')
+
+
+
+
+print("\n")
+
+
+# ---------------------  Bonus Practice
+
+a = 10
+b  = 5
+
+print(10 > 5)
+print(5 > 10)
+print(10 == 10)
+print(10 != 10)
+
+
+
+# -------------------  ODD or Even Checker
+
+number =  int(input("Enter an integer: "))
+
+if number % 2 == 0:
+    print(f"{number} is an even Number.")
+else:
+    print(f"{number} is an ODD number")
+
+
+
+
+
