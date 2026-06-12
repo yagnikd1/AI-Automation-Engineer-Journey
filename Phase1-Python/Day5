@@ -1,8 +1,6 @@
 # ------------------------------------------- Memory Chellenge ------------------
 
 
-
-
 # ----------------- Age Checker
 
 age = int(input('Enter your age: '))
