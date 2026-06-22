@@ -107,7 +107,7 @@ import os
 if os.path.exists("report.txt"):
     os.rename("report.txt", "report_backup.txt")    
 
-report = ("Enter Today's Report: ") 
+report = input("Enter Today's Report: ") 
 
 file = open("report.txt", "w")
 file.write(report)
