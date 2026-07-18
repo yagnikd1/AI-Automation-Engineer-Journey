@@ -377,5 +377,307 @@ print(f"Total articles scraped: {len(all_articles)}")
 # - Professional request flow
 # - Final Hacker News scraper integration
 #
+# Additional Day 40 topics completed:
+# - Logging request errors
+# - Retry mechanisms
+# - Maximum retry attempts
+# - Retry delays
+# - Exponential backoff
+#
+# Next roadmap topic:
+# Day 41 — requests.Session() and Cookies
+
+# ============================================================
+# 14. LOGGING REQUEST ERRORS
+# ============================================================
+
+# WHAT IT IS:
+# Logging means recording useful details whenever a request fails.
+#
+# HOW IT WORKS:
+# The request is placed inside try/except.
+# If requests raises an exception, the except block records:
+# - Time of failure
+# - URL that failed
+# - Error/exception message
+# - Optional HTTP status code
+#
+# WHY IT IS USEFUL:
+# In a scraper with many pages, a simple "Error" message is not enough.
+# Logging helps identify exactly:
+# - Which page failed
+# - When it failed
+# - Why it failed
+#
+# Example:
+#
+# from datetime import datetime
+#
+# try:
+#     response = requests.get(url, timeout=5)
+#     response.raise_for_status()
+#
+# except requests.exceptions.RequestException as e:
+#     print("=" * 40)
+#     print("ERROR LOG")
+#     print("Time   :", datetime.now())
+#     print("URL    :", url)
+#     print("Reason :", e)
+#     print("=" * 40)
+
+
+# ============================================================
+# 15. RETRY MECHANISMS
+# ============================================================
+
+# WHAT IT IS:
+# A retry mechanism attempts the same request again after a failure.
+#
+# HOW IT WORKS:
+# A loop repeats the request a limited number of times.
+# If the request succeeds:
+# - break stops the retry loop
+#
+# If the request fails:
+# - the exception is caught
+# - the program waits
+# - the next attempt begins
+#
+# WHY IT IS USEFUL:
+# Some failures are temporary, such as:
+# - Connection timeout
+# - Slow server
+# - Temporary network issue
+# - Temporary server overload
+#
+# Retrying gives the website a chance to recover and prevents
+# unnecessary data loss.
+#
+# Retry is NOT useful for:
+# - Wrong URL
+# - Programming mistakes
+# - Invalid HTML selectors
+# - Permanent 404 pages
+#
+# Basic example:
+#
+# for attempt in range(3):
+#     try:
+#         response = requests.get(url, timeout=5)
+#         response.raise_for_status()
+#
+#         print("Request successful")
+#         break
+#
+#     except requests.exceptions.RequestException as e:
+#         print(f"Attempt {attempt + 1} failed:", e)
+#         time.sleep(2)
+
+
+# ============================================================
+# 16. MAXIMUM RETRY ATTEMPTS
+# ============================================================
+
+# WHAT IT IS:
+# Maximum retry attempts set a limit on how many times the scraper
+# is allowed to try the same request.
+#
+# HOW IT WORKS:
+#
+# max_retries = 3
+#
+# for attempt in range(max_retries):
+#
+# range(max_retries) creates:
+# - attempt 0
+# - attempt 1
+# - attempt 2
+#
+# This means the request can run a maximum of 3 times.
+#
+# WHY IT IS USEFUL:
+# Without a retry limit, the scraper could retry forever.
+#
+# A retry limit prevents:
+# - Infinite loops
+# - Wasted time
+# - Excessive requests
+# - Extra pressure on the server
+#
+# It also allows the program to fail gracefully after reasonable attempts.
+#
+# Example:
+#
+# max_retries = 3
+#
+# for attempt in range(max_retries):
+#     try:
+#         response = requests.get(url, timeout=5)
+#         response.raise_for_status()
+#         print("Success")
+#         break
+#
+#     except requests.exceptions.RequestException as e:
+#         print(f"Attempt {attempt + 1} failed:", e)
+#
+#         if attempt == max_retries - 1:
+#             print("Maximum retry attempts reached")
+
+
+# ============================================================
+# 17. RETRY DELAYS
+# ============================================================
+
+# WHAT IT IS:
+# A retry delay pauses the program before the next retry attempt.
+#
+# HOW IT WORKS:
+#
+# time.sleep(2)
+#
+# pauses the program for 2 seconds.
+#
+# Important:
+# time.sleep(2) does NOT control the number of retries.
+# It only controls how long the scraper waits before trying again.
+#
+# WHY IT IS USEFUL:
+# Retrying immediately may fail again because the server may still
+# be slow, busy, or temporarily unavailable.
+#
+# Waiting gives:
+# - The server time to recover
+# - The network time to reconnect
+# - The scraper a better chance of succeeding
+#
+# Example:
+#
+# except requests.exceptions.RequestException:
+#     print("Request failed")
+#     time.sleep(2)
+
+
+# ============================================================
+# 18. EXPONENTIAL BACKOFF
+# ============================================================
+
+# WHAT IT IS:
+# Exponential backoff increases the waiting time after every failure.
+#
+# HOW IT WORKS:
+#
+# wait = 2 ** attempt
+#
+# Attempt values and delays:
+#
+# attempt = 0 -> 2 ** 0 -> 1 second
+# attempt = 1 -> 2 ** 1 -> 2 seconds
+# attempt = 2 -> 2 ** 2 -> 4 seconds
+# attempt = 3 -> 2 ** 3 -> 8 seconds
+#
+# Important:
+# *  means multiplication
+# ** means exponent or power
+#
+# WHY IT IS USEFUL:
+# If many scrapers retry immediately, they may hit the server again
+# at the same time and make the overload worse.
+#
+# Exponential backoff:
+# - Keeps the first retry quick
+# - Makes later retries slower
+# - Reduces repeated pressure on the server
+# - Gives the server more recovery time
+# - Improves the chance of a successful request
+#
+# Example:
+#
+# max_retries = 4
+#
+# for attempt in range(max_retries):
+#     try:
+#         response = requests.get(url, timeout=5)
+#         response.raise_for_status()
+#
+#         print("Request successful")
+#         break
+#
+#     except requests.exceptions.RequestException as e:
+#         print(f"Attempt {attempt + 1} failed:", e)
+#
+#         if attempt < max_retries - 1:
+#             wait = 2 ** attempt
+#             print(f"Waiting {wait} seconds...")
+#             time.sleep(wait)
+#         else:
+#             print("Maximum retry attempts reached")
+
+
+# ============================================================
+# 19. COMPLETE RETRY PATTERN
+# ============================================================
+
+from datetime import datetime
+
+
+def request_with_retries(url, headers, max_retries=4):
+    """Request one URL using logging, retry limits, and backoff."""
+
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(
+                url,
+                headers=headers,
+                timeout=10
+            )
+
+            response.raise_for_status()
+
+            print("Request successful")
+            return response
+
+        except requests.exceptions.RequestException as e:
+            print("=" * 50)
+            print("REQUEST ERROR LOG")
+            print("Time    :", datetime.now())
+            print("URL     :", url)
+            print("Attempt :", attempt + 1)
+            print("Reason  :", e)
+            print("=" * 50)
+
+            if attempt < max_retries - 1:
+                wait = 2 ** attempt
+                print(f"Waiting {wait} seconds before retry...\n")
+                time.sleep(wait)
+
+            else:
+                print("Maximum retry attempts reached.")
+                return None
+
+
+# ============================================================
+# 20. UPDATED DAY 40 SUMMARY
+# ============================================================
+
+# Completed:
+# - Request-level failures
+# - timeout=10
+# - try
+# - except
+# - requests.exceptions.RequestException
+# - as e
+# - continue
+# - Difference between exceptions and status codes
+# - Professional request flow
+# - Logging request errors
+# - Retry mechanisms
+# - Maximum retry attempts
+# - Retry delays
+# - Exponential backoff
+# - Complete professional retry pattern
+#
+# Day 40 unfinished subtopics:
+# - None
+#
 # Next roadmap topic:
 # Day 41 — requests.Session() and Cookies
