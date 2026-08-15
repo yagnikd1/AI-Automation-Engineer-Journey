@@ -39,7 +39,7 @@ The original roadmap requires:
 5. Async Automation
 6. Network Interception
 
-## Verified progress before Day 68
+## Verified progress before Day 69
 
 ### Day 66 — Completed
 
@@ -101,6 +101,40 @@ Deliverables:
 - `Day_67_Selenium_Element_Finder.py` was uploaded to `Phase3-Browser-Automation` with a relevant commit.
 - `Day_67_Finding_Elements_Foundations_Complete_Handbook.docx` was uploaded to the Phase 3 Google Drive study-guide folder.
 
+### Day 68 — Completed
+
+**Topic:** Text- and Class-Based Locators
+
+Completed coverage:
+
+- `By.CLASS_NAME`
+- Limitations of compound class names
+- `By.LINK_TEXT`
+- `By.PARTIAL_LINK_TEXT`
+- Extracting visible text with `.text`
+- Reading standard and custom attributes with `get_attribute()`
+- `is_displayed()`
+- `is_enabled()`
+- `is_selected()`
+- Gap lesson: `urllib.parse.quote()`, percent encoding, data URLs, and the distinction between encoding and encryption
+
+Practical verification:
+
+- Microsoft Edge opened the authorised embedded practice page.
+- The page title and data URL were verified.
+- Two course cards were found by class.
+- Visible headings and custom `data-id` attributes were extracted.
+- Exact and partial link-text locators returned the expected links.
+- A compound-class element was found with the correct CSS selector.
+- Displayed, enabled, selected, disabled, and hidden states returned the expected Boolean results.
+- The browser session ended safely.
+- The final knowledge check passed after corrections.
+
+Deliverables:
+
+- `Day_68_Text_and_Class_Locators.py` was uploaded to `Phase3-Browser-Automation` with the Day 68 tracker update.
+- `Day_68_Text_and_Class_Locators_Complete_Handbook.docx` was uploaded to the Phase 3 Google Drive study-guide folder.
+
 ## Canonical day-by-day Phase 3 plan
 
 ### Week 9 equivalent — Days 66–72: Selenium foundations
@@ -133,7 +167,7 @@ Deliverables:
 - What happens when no element is found
 - `NoSuchElementException`
 
-#### Day 68 — Text- and class-based locators — STARTED, NOT COMPLETED
+#### Day 68 — Text- and class-based locators — COMPLETED
 
 - `By.CLASS_NAME`
 - Limitations of compound class names
@@ -442,13 +476,14 @@ There is no pending carryover from this three-item list.
 
 ## Current continuation point
 
-- Last verified completed day: **Day 67**
-- Current day: **Day 68 — started, not completed**
-- Current original-roadmap area: **Selenium — Finding Elements**
-- Phase 3 overall status: **2 of 28 days completed**
-- Remaining Phase 3 days after Day 67: **26**
+- Last verified completed day: **Day 68**
+- Current day: **Day 69 — not started**
+- Current original-roadmap area: **Selenium — Finding Elements / CSS selectors**
+- Phase 3 overall status: **3 of 28 days completed**
+- Remaining Phase 3 days after Day 68: **25**
+- Unfinished earlier learning subtopics: **none**
 
-Before continuing Day 68, use the Day 68 list above as the coverage checklist and do not mark the day complete until every item has been addressed and verified.
+Before starting Day 69, use the Day 69 list above as the coverage checklist. Earlier introductory CSS exposure does not make Day 69 complete; its dedicated topics must still be taught, practised, checked, and confirmed.
 
 ## Permanent cross-chat source
 
