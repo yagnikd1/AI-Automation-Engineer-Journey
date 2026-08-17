@@ -226,16 +226,29 @@ Deliverables:
 - Testing selectors with DevTools
 - Stable versus fragile selectors
 
-#### Day 70 — XPath
+#### Day 70 — XPath — IN PROGRESS
+
+Completed and verified on 17 August 2026:
 
 - Absolute versus relative XPath
-- Attribute matching
-- Exact text matching
-- `contains()`
-- Parent and child relationships
-- Positional indexes
+- Tag, wildcard, and attribute matching
+- Multiple attributes with `and` and `or`
+- Exact text matching with `text()` and `normalize-space()`
+- Partial and prefix matching with `contains()` and `starts-with()`
+- Parent, ancestor, child, descendant, and sibling relationships
+- Positional indexes, parentheses, and `last()`
+- Stable versus fragile XPath construction
+- DevTools XPath testing
+- Selenium XPath execution in Microsoft Edge
+- Current-element searches with `.//`
+- `find_element()`, `find_elements()`, and safe `NoSuchElementException` handling
+
+Still pending for the next study session after guided revision:
+
 - XPath versus CSS selectors
 - When XPath is justified
+
+Do not mark Day 70 completed until both pending topics are taught and knowledge-checked.
 
 #### Day 71 — Reliable locator strategy
 
@@ -512,13 +525,21 @@ There is no pending carryover from this three-item list.
 ## Current continuation point
 
 - Last verified completed day: **Day 69**
-- Current day: **Day 70 — not started**
+- Current day: **Day 70 — in progress**
 - Current original-roadmap area: **Selenium — Finding Elements / XPath**
-- Phase 3 overall status: **4 of 28 days completed**
-- Remaining Phase 3 days after Day 69: **24**
-- Unfinished earlier learning subtopics: **none**
+- Phase 3 officially completed status: **4 of 28 days completed**
+- Remaining Phase 3 days after the last completed day (Day 69): **24**
+- Unfinished earlier learning subtopics before Day 70: **none**
+- Pending Day 70 subtopics: **XPath versus CSS selectors; when XPath is justified**
+- Continuation instruction: **tomorrow, complete the guided revision program first; then teach and verify the two pending Day 70 topics before any completion audit.**
 
-Before starting Day 70, use the Day 70 list above as the coverage checklist. Day 69 is complete only because its dedicated CSS-selector theory, Selenium practical, DevTools testing, and final knowledge check were all verified.
+Day 70 partial deliverables are already stored but correctly marked in progress:
+
+- GitHub Python file: `Phase3-Browser-Automation/Day_70_XPath_Locators.py`
+- Corrective commit: `f812e530de844fa3cf583229bafa3690b5e3c1fd` with message `Correct Day 70 pending XPath topics`
+- Google Drive handbook: `Day_70_XPath_Locators_Complete_Handbook.docx`, file ID `1c8mmpaJTiD7fK-dkohJVbmG4K9xsikfR`
+
+Do not advance to Day 71 or change the completed-day count until the two remaining Day 70 topics pass teaching and knowledge verification.
 
 ## Permanent cross-chat source
 
