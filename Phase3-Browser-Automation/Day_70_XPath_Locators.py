@@ -4,6 +4,18 @@ Phase 3: Browser Automation
 
 Program name: XPath Country Information Collector
 
+Current learning status
+-----------------------
+Day 70 is still in progress. The XPath concepts demonstrated in this file were
+taught, practised, and verified. Two canonical roadmap subtopics remain pending
+for the next study session after the guided revision program:
+
+1. XPath versus CSS selectors
+2. When XPath is justified
+
+Do not mark Day 70 officially completed until both pending topics have been
+taught and knowledge-checked.
+
 Purpose
 -------
 Open the Scrape This Site countries page in Microsoft Edge and demonstrate
@@ -281,4 +293,16 @@ if __name__ == "__main__":
 # 2. Press Ctrl+F.
 # 3. Enter the XPath.
 # 4. Confirm the match count and highlighted element before using it in code.
-
+#
+# CURRENT ROADMAP STATUS
+# ----------------------
+# Verified today:
+#     - XPath syntax, attributes, text functions, indexing, relationships,
+#       axes, DevTools testing, stable/fragile construction, Selenium use,
+#       and safe missing-element handling.
+#
+# Pending for the next study session after guided revision:
+#     1. XPath versus CSS selectors
+#     2. When XPath is justified
+#
+# Day 70 remains IN PROGRESS until these two topics are taught and checked.
