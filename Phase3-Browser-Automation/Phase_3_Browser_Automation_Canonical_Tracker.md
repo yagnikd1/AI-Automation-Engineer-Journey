@@ -226,9 +226,7 @@ Deliverables:
 - Testing selectors with DevTools
 - Stable versus fragile selectors
 
-#### Day 70 — XPath — IN PROGRESS
-
-Completed and verified on 17 August 2026:
+#### Day 70 — XPath — COMPLETED
 
 - Absolute versus relative XPath
 - Tag, wildcard, and attribute matching
@@ -242,15 +240,16 @@ Completed and verified on 17 August 2026:
 - Selenium XPath execution in Microsoft Edge
 - Current-element searches with `.//`
 - `find_element()`, `find_elements()`, and safe `NoSuchElementException` handling
-
-Still pending for the next study session after guided revision:
-
 - XPath versus CSS selectors
 - When XPath is justified
 
-Do not mark Day 70 completed until both pending topics are taught and knowledge-checked.
+Completion verification on 18 August 2026:
 
-#### Day 71 — Reliable locator strategy
+- The two previously pending comparison and decision topics were taught.
+- The corrected knowledge check passed.
+- No Day 70 topic or subtopic remains pending.
+
+#### Day 71 — Reliable locator strategy — COMPLETED
 
 - Locator-priority strategy
 - Unique versus non-unique elements
@@ -260,6 +259,23 @@ Do not mark Day 70 completed until both pending topics are taught and knowledge-
 - Handling missing elements
 - Avoiding brittle selectors
 - Clear diagnostic output for locator failures
+
+Practical verification on 18 August 2026:
+
+- The guided revision program produced the expected course-availability report.
+- Microsoft Edge successfully ran the authorised offline Support Ticket Locator Audit.
+- Stable locator constants returned unique intended elements.
+- A broad class locator correctly reported two matches as non-unique.
+- A missing optional element returned `None` with clear diagnostic output.
+- The program continued safely and closed the browser through `finally`.
+- All Day 71 knowledge checks passed after corrections.
+
+Deliverables:
+
+- GitHub Python file: `Phase3-Browser-Automation/Day_71_Reliable_Locator_Strategy.py`
+- Python commit: `09a82b3b0fcbc80e04b8834561b3bd55ce5d7b4b`
+- Google Drive handbook: `Day_71_Reliable_Locator_Strategy_Complete_Handbook.docx`
+- Google Drive file ID: `17Uu4-U2FEWha2mULAz1-f_08x-hx7ikQ`
 
 #### Day 72 — Basic page interactions
 
@@ -524,22 +540,22 @@ There is no pending carryover from this three-item list.
 
 ## Current continuation point
 
-- Last verified completed day: **Day 69**
-- Current day: **Day 70 — in progress**
-- Current original-roadmap area: **Selenium — Finding Elements / XPath**
-- Phase 3 officially completed status: **4 of 28 days completed**
-- Remaining Phase 3 days after the last completed day (Day 69): **24**
-- Unfinished earlier learning subtopics before Day 70: **none**
-- Pending Day 70 subtopics: **XPath versus CSS selectors; when XPath is justified**
-- Continuation instruction: **tomorrow, complete the guided revision program first; then teach and verify the two pending Day 70 topics before any completion audit.**
+- Last verified completed day: **Day 71**
+- Next day: **Day 72 — Basic page interactions**
+- Current original-roadmap area: **Selenium — Interacting with Pages**
+- Phase 3 officially completed status: **6 of 28 days completed**
+- Remaining Phase 3 days after Day 71: **22**
+- Unfinished earlier learning topics or subtopics: **none**
+- Day 72 must begin with the required guided Python + web-scraping revision program.
+- Do not begin Day 72's browser-interaction topic without the user's approval.
 
-Day 70 partial deliverables are already stored but correctly marked in progress:
+Day 71 completion evidence:
 
-- GitHub Python file: `Phase3-Browser-Automation/Day_70_XPath_Locators.py`
-- Corrective commit: `f812e530de844fa3cf583229bafa3690b5e3c1fd` with message `Correct Day 70 pending XPath topics`
-- Google Drive handbook: `Day_70_XPath_Locators_Complete_Handbook.docx`, file ID `1c8mmpaJTiD7fK-dkohJVbmG4K9xsikfR`
-
-Do not advance to Day 71 or change the completed-day count until the two remaining Day 70 topics pass teaching and knowledge verification.
+- Program: **Support Ticket Locator Audit**
+- Browser: **Microsoft Edge**
+- Verified terminal result: stable unique matches, one correctly detected non-unique locator, one safely handled missing optional element, clear diagnostics, and safe browser cleanup
+- GitHub commit: `09a82b3b0fcbc80e04b8834561b3bd55ce5d7b4b`
+- Drive handbook file ID: `17Uu4-U2FEWha2mULAz1-f_08x-hx7ikQ`
 
 ## Permanent cross-chat source
 
