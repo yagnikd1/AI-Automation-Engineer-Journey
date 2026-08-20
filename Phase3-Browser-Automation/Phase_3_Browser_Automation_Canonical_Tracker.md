@@ -315,7 +315,7 @@ Completion audit:
 
 ### Week 10 equivalent — Days 73–79: Selenium interaction and dynamic content
 
-#### Day 73 — Forms and controls
+#### Day 73 — Forms and controls — COMPLETED
 
 - Text inputs
 - Text areas
@@ -323,10 +323,37 @@ Completion audit:
 - Radio buttons
 - Native HTML dropdowns
 - Selenium `Select`
-- Selecting options by text, value, and index
+- Selecting options by visible text, value, and zero-based index
 - Submit buttons
 - Keyboard keys
-- Reading validation messages
+- Reading native HTML validation messages
+
+Practical verification:
+
+- The required Community Event Registration Report guided revision combined Python fundamentals and BeautifulSoup scraping, retained two available events, calculated 13 total seats and a $21.25 average fee, identified the highest-fee event, and exported `available_community_events.csv`.
+- Microsoft Edge successfully ran the authorised offline Event Registration Portal.
+- A text input and textarea accepted input and their live values were read through `get_attribute("value")`.
+- The email-updates checkbox was selected conditionally and verified through `is_selected()`.
+- Beginner and Intermediate radio buttons shared `name="experience"`; selecting Intermediate changed Beginner to `False` and Intermediate to `True`, verifying radio-group exclusivity.
+- A native HTML dropdown was wrapped with Selenium `Select`.
+- Options were selected by visible text, value, and zero-based index, returning Morning, Afternoon, and Evening Session respectively.
+- `Keys.CONTROL + "a"` replaced existing textarea content and `Keys.TAB` moved keyboard focus.
+- Clearing the required participant name produced the browser validation message and blocked invalid form submission.
+- Valid submission revealed the confirmation section and changed `data-state` from `pending` to `submitted`.
+- The browser closed safely through `finally`.
+
+Knowledge verification:
+
+- The final knowledge check passed after correcting input-value reading, the scope of `is_selected()`, zero-based dropdown indexes, and the reason native validation blocked the submit event.
+- A second roadmap audit found and corrected the initially unverified radio-group exclusivity behaviour.
+- No Day 73 or earlier learning topic remains unfinished.
+
+Deliverables:
+
+- GitHub Python file: `Phase3-Browser-Automation/Day_73_Forms_and_Controls.py`
+- Python commit: `04bc24e333c072419c90169cde4f3b927452d6a8`
+- Google Drive handbook: `Day_73_Forms_and_Controls_Complete_Handbook.docx`
+- Google Drive file ID: `1cIXzlUewDTicCGoW6w6ZbirMgNEloSa5`
 
 #### Day 74 — Navigation and browser state
 
@@ -566,22 +593,22 @@ There is no pending carryover from this three-item list.
 
 ## Current continuation point
 
-- Last verified completed day: **Day 72**
-- Next day: **Day 73 — Forms and controls**
+- Last verified completed day: **Day 73**
+- Next day: **Day 74 — Navigation and browser state**
 - Current original-roadmap area: **Selenium — Interacting with Pages**
-- Phase 3 officially completed status: **7 of 28 days completed**
-- Remaining Phase 3 days after Day 72: **21**
+- Phase 3 officially completed status: **8 of 28 days completed**
+- Remaining Phase 3 days after Day 73: **20**
 - Unfinished earlier learning topics or subtopics: **none**
-- Day 73 must begin with the required guided Python + web-scraping revision program.
-- Do not begin Day 73's forms-and-controls topic without the user's approval.
+- Day 74 must begin with the required guided Python + web-scraping revision program.
+- Do not begin Day 74's navigation-and-browser-state topic without the user's approval.
 
-Day 72 completion evidence:
+Day 73 completion evidence:
 
-- Program: **Service Request Submission Portal**
+- Program: **Event Registration Portal**
 - Browser: **Microsoft Edge**
-- Verified terminal result: input typing and replacement, submit-button and link clicks, form submission, visible-text and attribute verification, hidden-to-visible confirmation transition, and safe browser cleanup
-- GitHub commit: `ff60873bb73e8e5605dd99fcbb16204359d66675`
-- Drive handbook file ID: `1WnZKfz4ZoROgNsrOltvdMs1tyrEdrMFz`
+- Verified terminal result: text input, textarea, checkbox, radio-group exclusivity, native dropdown selection by text/value/index, keyboard keys, invalid validation blocking, valid submission, state verification, and safe cleanup
+- GitHub commit: `04bc24e333c072419c90169cde4f3b927452d6a8`
+- Drive handbook file ID: `1cIXzlUewDTicCGoW6w6ZbirMgNEloSa5`
 
 ## Permanent cross-chat source
 
