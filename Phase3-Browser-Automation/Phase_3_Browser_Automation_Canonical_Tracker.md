@@ -355,7 +355,7 @@ Deliverables:
 - Google Drive handbook: `Day_73_Forms_and_Controls_Complete_Handbook.docx`
 - Google Drive file ID: `1cIXzlUewDTicCGoW6w6ZbirMgNEloSa5`
 
-#### Day 74 — Navigation and browser state
+#### Day 74 — Navigation and browser state — COMPLETED
 
 - Back navigation
 - Forward navigation
@@ -367,6 +367,31 @@ Deliverables:
 - Window handles
 - Switching windows/tabs
 - Closing the intended tab safely
+
+Practical verification on 21 August 2026:
+
+- The required Browser Activity Report guided revision combined Python fundamentals and BeautifulSoup scraping, extracted three records, sorted visit counts, calculated 34 total visits and an 11.33 average, identified Project Reports as most visited, and exported `browser_activity_report.csv`.
+- Microsoft Edge successfully ran the authorised offline navigation-and-browser-state program.
+- `driver.back()` restored Customer Dashboard and `driver.forward()` restored Order History; titles and exact URLs verified both operations.
+- `driver.refresh()` reloaded Order History while the expected URL and title remained unchanged.
+- `driver.current_url`, `driver.title`, and `driver.page_source` were read and verified.
+- Selenium page source was confirmed as a string, searched for expected content, and parsed with BeautifulSoup.
+- Selenium opened Activity Report in a new tab and Help Centre in a separate window.
+- `current_window_handle` and `window_handles` identified the active context and all open contexts.
+- Explicit handle-based switching returned control to the intended original, report, and help contexts.
+- The report tab and Help Centre window were each selected and verified before `driver.close()`; the original Order History tab survived and was restored.
+- `driver.quit()` ran through `finally` and closed the browser safely.
+
+Knowledge verification:
+
+- The rapid knowledge check passed.
+- The assessment clarified that “survivor tab” correctly expresses why the original handle is saved and restored; concise correct understanding does not require copying one prescribed sentence.
+- No Day 74 or earlier learning topic remains unfinished.
+
+Deliverables:
+
+- GitHub Python file: `Phase3-Browser-Automation/Day_74_Navigation_and_Browser_State.py`
+- Google Drive handbook: `Day_74_Navigation_and_Browser_State_Complete_Handbook.docx`
 
 #### Day 75 — Selenium waits
 
@@ -593,22 +618,22 @@ There is no pending carryover from this three-item list.
 
 ## Current continuation point
 
-- Last verified completed day: **Day 73**
-- Next day: **Day 74 — Navigation and browser state**
-- Current original-roadmap area: **Selenium — Interacting with Pages**
-- Phase 3 officially completed status: **8 of 28 days completed**
-- Remaining Phase 3 days after Day 73: **20**
+- Last verified completed day: **Day 74**
+- Next day: **Day 75 — Selenium waits**
+- Current original-roadmap area: **Selenium — Waits**
+- Phase 3 officially completed status: **9 of 28 days completed**
+- Remaining Phase 3 days after Day 74: **19**
 - Unfinished earlier learning topics or subtopics: **none**
-- Day 74 must begin with the required guided Python + web-scraping revision program.
-- Do not begin Day 74's navigation-and-browser-state topic without the user's approval.
+- Day 75 must begin with the required guided Python + web-scraping revision program.
+- Do not begin Day 75's Selenium-waits topic without the user's approval.
 
-Day 73 completion evidence:
+Day 74 completion evidence:
 
-- Program: **Event Registration Portal**
+- Program: **Navigation and Browser State**
 - Browser: **Microsoft Edge**
-- Verified terminal result: text input, textarea, checkbox, radio-group exclusivity, native dropdown selection by text/value/index, keyboard keys, invalid validation blocking, valid submission, state verification, and safe cleanup
-- GitHub commit: `04bc24e333c072419c90169cde4f3b927452d6a8`
-- Drive handbook file ID: `1cIXzlUewDTicCGoW6w6ZbirMgNEloSa5`
+- Verified terminal result: back, forward, refresh, current URL, title, page source, BeautifulSoup parsing, new tab, new window, handle inspection, explicit switching, intended-context closure, survivor restoration, and safe cleanup
+- GitHub Python file: `Phase3-Browser-Automation/Day_74_Navigation_and_Browser_State.py`
+- Drive handbook: `Day_74_Navigation_and_Browser_State_Complete_Handbook.docx`
 
 ## Permanent cross-chat source
 
