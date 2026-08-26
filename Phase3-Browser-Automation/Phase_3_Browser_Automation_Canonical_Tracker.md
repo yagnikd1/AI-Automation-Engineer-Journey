@@ -436,18 +436,36 @@ Deliverables:
 - Switching into an iframe
 - Returning to the main document
 
-#### Day 79 — Screenshots and Selenium checkpoint
+#### Day 79 — Screenshots and Selenium checkpoint — COMPLETED
 
 - `driver.save_screenshot()`
 - Element-level screenshots
-- Timestamped evidence files
+- Screenshot success return values
+- Evidence directories and resolved paths
+- Timestamped evidence files and overwrite prevention
 - Capturing screenshots after failures
 - Structured logging
+- Exception preservation with `raise`
 - Complete Selenium practice project
 - Form interaction
 - Dynamic-content handling
 - Result verification
-- Reliable cleanup
+- Reliable cleanup with `finally`
+
+Practical verification on 26 August 2026:
+
+- The guided Refund Case Monitor found four cases, skipped RF-704 for invalid numeric data, filtered the completed case, retained RF-701 and RF-703, calculated 62 total waiting minutes and a 31.00-minute average, identified RF-701 as highest priority, exported CSV, and verified the dynamic dashboard result `Pending cases: 2`.
+- A deliberate `Pending cases: 99` mismatch proved the failure workflow: traceback logging, timestamped failure evidence, exception re-raising, and safe Edge cleanup.
+- Microsoft Edge completed the authorised offline Warranty Claim checkpoint with claim WC-901 for Morgan Reed, Laptop selected, purchase proof checked, dynamic loader appearance and disappearance, approved-inspection status, matching reference, final-title verification, viewport evidence, and result-panel evidence.
+- A real stale-element failure was diagnosed: JavaScript removed the overlay from the DOM, so the stored WebElement became stale. Capturing `overlay.is_displayed()` before the removal fixed it.
+- The final knowledge check and canonical roadmap audit passed. No Day 79 or earlier assigned learning subtopic remains unfinished.
+
+Deliverables:
+
+- GitHub Python file: `Phase3-Browser-Automation/Day_79_Screenshots_and_Selenium_Checkpoint.py`
+- Python commit: `31ea36af6d2a45c61f8f1d65df8ab5f0fc3dcce4`
+- Google Drive handbook: `Day_79_Screenshots_and_Selenium_Checkpoint_Complete_Handbook.docx`
+- Google Drive file ID: `1hV1K-ItxFJFlA6vxnZWMhDuzgoiqE4Gb`
 
 ### Week 11 equivalent — Days 80–86: Playwright foundations
 
@@ -618,22 +636,24 @@ There is no pending carryover from this three-item list.
 
 ## Current continuation point
 
-- Last verified completed day: **Day 74**
-- Next day: **Day 75 — Selenium waits**
-- Current original-roadmap area: **Selenium — Waits**
-- Phase 3 officially completed status: **9 of 28 days completed**
-- Remaining Phase 3 days after Day 74: **19**
+- Last verified completed day: **Day 79**
+- Next day: **Day 80 — Why Playwright and installation**
+- Current original-roadmap area: **Playwright foundations**
+- Phase 3 officially completed status: **14 of 28 days completed**
+- Remaining Phase 3 days after Day 79: **14**
 - Unfinished earlier learning topics or subtopics: **none**
-- Day 75 must begin with the required guided Python + web-scraping revision program.
-- Do not begin Day 75's Selenium-waits topic without the user's approval.
+- Day 80 must begin with the required rapid guided Python + web-scraping revision program.
+- Do not begin Day 80's Playwright topic without the user's approval.
 
-Day 74 completion evidence:
+Day 79 completion evidence:
 
-- Program: **Navigation and Browser State**
+- Program: **Screenshots and Selenium Checkpoint**
 - Browser: **Microsoft Edge**
-- Verified terminal result: back, forward, refresh, current URL, title, page source, BeautifulSoup parsing, new tab, new window, handle inspection, explicit switching, intended-context closure, survivor restoration, and safe cleanup
-- GitHub Python file: `Phase3-Browser-Automation/Day_74_Navigation_and_Browser_State.py`
-- Drive handbook: `Day_74_Navigation_and_Browser_State_Complete_Handbook.docx`
+- Verified terminal result: refund-case extraction and aggregation, dynamic result verification, deliberate failure proof, structured logging, timestamped viewport and element evidence, warranty form interaction, loader handling, result verification, stale-element diagnosis, exception re-raising, and safe cleanup
+- GitHub Python file: `Phase3-Browser-Automation/Day_79_Screenshots_and_Selenium_Checkpoint.py`
+- Python commit: `31ea36af6d2a45c61f8f1d65df8ab5f0fc3dcce4`
+- Drive handbook: `Day_79_Screenshots_and_Selenium_Checkpoint_Complete_Handbook.docx`
+- Drive file ID: `1hV1K-ItxFJFlA6vxnZWMhDuzgoiqE4Gb`
 
 ## Permanent cross-chat source
 
