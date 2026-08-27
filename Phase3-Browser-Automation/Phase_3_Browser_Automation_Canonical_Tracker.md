@@ -469,7 +469,7 @@ Deliverables:
 
 ### Week 11 equivalent — Days 80–86: Playwright foundations
 
-#### Day 80 — Why Playwright and installation
+#### Day 80 — Why Playwright and installation — COMPLETED
 
 - Why Playwright exists
 - Selenium versus Playwright
@@ -479,6 +479,23 @@ Deliverables:
 - Browser, context, and page architecture
 - Synchronous versus asynchronous APIs
 - First Playwright browser session
+
+Practical verification:
+
+- Playwright 1.62.0 was installed inside the Phase 3 `myenv` virtual environment with Python 3.14.
+- Chromium-only browser binaries were installed in Playwright's shared per-user cache.
+- The accidental global Playwright, pyee, and greenlet packages were removed; the global interpreter no longer imports Playwright, while the Phase 3 virtual environment does.
+- The first headed Chromium Playwright session passed: title and heading were both `Automation Operations Portal`, two job cards were found, and the screenshot was created.
+- BrowserContext, Page, synchronous versus asynchronous APIs, Selenium comparison, supported browser engines, and package-versus-browser installation were checked.
+- Knowledge correction recorded: `context.new_page()` is the method that creates and returns a `Page` object.
+- No Day 80 or earlier assigned learning subtopic remains unfinished.
+
+Deliverables:
+
+- GitHub Python file: `Phase3-Browser-Automation/Day_80_Why_Playwright_and_Installation.py`
+- Python commit: `5a6fd63e43e7a0278f70950ad57560a75ea136f9`
+- Google Drive handbook: `Day_80_Why_Playwright_and_Installation_Complete_Handbook.docx`
+- Google Drive file ID: `1weXZxHAqEIxs4D98olPPkkHXQCch5eS8`
 
 #### Day 81 — Playwright navigation and locators
 
@@ -636,24 +653,25 @@ There is no pending carryover from this three-item list.
 
 ## Current continuation point
 
-- Last verified completed day: **Day 79**
-- Next day: **Day 80 — Why Playwright and installation**
+- Last verified completed day: **Day 80**
+- Next day: **Day 81 — Playwright navigation and locators**
 - Current original-roadmap area: **Playwright foundations**
-- Phase 3 officially completed status: **14 of 28 days completed**
-- Remaining Phase 3 days after Day 79: **14**
+- Phase 3 officially completed status: **15 of 28 days completed**
+- Remaining Phase 3 days after Day 80: **13**
 - Unfinished earlier learning topics or subtopics: **none**
-- Day 80 must begin with the required rapid guided Python + web-scraping revision program.
-- Do not begin Day 80's Playwright topic without the user's approval.
+- Day 81 must begin with the required rapid guided Python + web-scraping revision program.
+- Do not begin Day 81's navigation-and-locators topic without the user's approval.
 
-Day 79 completion evidence:
+Day 80 completion evidence:
 
-- Program: **Screenshots and Selenium Checkpoint**
-- Browser: **Microsoft Edge**
-- Verified terminal result: refund-case extraction and aggregation, dynamic result verification, deliberate failure proof, structured logging, timestamped viewport and element evidence, warranty form interaction, loader handling, result verification, stale-element diagnosis, exception re-raising, and safe cleanup
-- GitHub Python file: `Phase3-Browser-Automation/Day_79_Screenshots_and_Selenium_Checkpoint.py`
-- Python commit: `31ea36af6d2a45c61f8f1d65df8ab5f0fc3dcce4`
-- Drive handbook: `Day_79_Screenshots_and_Selenium_Checkpoint_Complete_Handbook.docx`
-- Drive file ID: `1hV1K-ItxFJFlA6vxnZWMhDuzgoiqE4Gb`
+- Program: **Why Playwright and Installation**
+- Browser: **Chromium**
+- Environment: **Phase 3 myenv with Python 3.14 and Playwright 1.62.0**
+- Verified terminal result: title and heading `Automation Operations Portal`, two job cards, and screenshot creation
+- GitHub Python file: `Phase3-Browser-Automation/Day_80_Why_Playwright_and_Installation.py`
+- Python commit: `5a6fd63e43e7a0278f70950ad57560a75ea136f9`
+- Drive handbook: `Day_80_Why_Playwright_and_Installation_Complete_Handbook.docx`
+- Drive file ID: `1weXZxHAqEIxs4D98olPPkkHXQCch5eS8`
 
 ## Permanent cross-chat source
 
